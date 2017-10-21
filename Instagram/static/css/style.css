@@ -1,0 +1,68 @@
+body {
+  background-color: #365;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100hv;
+  background: #365;
+  font-family: 'Indie Flower', cursive;
+}
+
+.photo_container {
+  width: 600px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  color: black;
+}
+
+.photo_container .photo_user {
+  border-radius: 100px;
+}
+
+.photo_container .photo_header {
+  display: flex;
+}
+
+.photo_container .photo_user {
+  padding: 3px;
+}
+
+.photo_container .photo_image img {
+  width: 100%;
+  display: block;
+}
+
+[class^="icon-"] {
+  padding: 3px;
+  color: black;
+}
+
+.photo_container .photo_likes {
+  margin: 1px;
+  padding: 0 3px 3px 3px;
+}
+
+.photo_container .photo_comments {
+  margin: 1px;
+  padding: 0 3px 3px 3px;
+}
+
+.photo_comments {
+  padding: 0 3px 3px 3px;
+  margin: 0;
+  font-size: 0.85rem;
+  width: 100%;
+  display: flex;
+}
+
+.photo_add_comment {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  padding: 3px 0;
+  outline: 0;
+  font-size: 0.8rem;
+  align-items: center;
+}
