@@ -12,11 +12,12 @@
     <hr>
 
 
-    <form action="signup.html" method="post">
-    <input type="text" name=" " placeholder="Correo electrónico"><p>
-    <input type="text" name=" " placeholder="nombre completo"><p>
-    <input type="text" name=" " placeholder="usuario"><p>
-    <input type="Password" name=" " placeholder="Contraseña"><p>
+  <form action="{% url 'signup' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="correo" placeholder="Correo electrónico"><p>
+    <input type="text" name="nombre_completo" placeholder="nombre completo"><p>
+    <input type="text" name="usuario" placeholder="usuario"><p>
+    <input type="Password" name="password" placeholder="Contraseña"><p>
 
     </div>
     <input type="submit" name=" " value="registrarse"><p>
@@ -24,6 +25,6 @@
 
 
     </center>
-    </form>
+  </form>
   </body>
   </html>
