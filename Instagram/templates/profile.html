@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram profile</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="{% static 'css/profile_style.css' %}">
+
+
+</head>
+
+<body>
+
+<section class="insta">
+  <section class="insta-header"><img class="insta-photo-profile" src="https://cdn.dribbble.com/users/259149/screenshots/2487219/totoro-sticker.png"/>
+    <section class="insta-header-data">
+      <section class="insta-info">
+        <h2 class="insta-username">{{ usuario_actual.usuario_django.username }}</h2>
+        <button class="insta-follow-button">Seguir</button>
+        <button class="insta-suggestions fa fa-caret-down"></button>
+        <button class="insta-options fa fa-ellipsis-h"></button>
+      </section>
+      <section class="insta-follows">
+        <p><span class="insta-indicator">12</span>publicaciones</p>
+        <p><span class="insta-indicator">23</span>seguidores</p>
+        <p><span class="insta-indicator">30</span>seguidos</p>
+      </section>
+      <section class="insta-description">Papá, seguro que en esta casa vive algo raro! ¡Es fantástico! Siempre he soñado con vivir en una casa embrujada.</section>
+    </section>
+  </section>
+  <section class="insta-gallery">
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
+      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+    </section>
+  </section>
+</section>
+
+
+</body>
+</html>

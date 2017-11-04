@@ -14,10 +14,11 @@
 </head>
 
 <body>
+  <a href="{% url 'signout' %}">Cerrar sesion</a>
   <section class="photo_container">
   <section class="photo_header">
     <img src="http://via.placeholder.com/60x60" class="photo_user">
-    <h3 class="photo_username">Username</h3>
+    <a href="{% url 'profile' %}"h3 class="photo_username">Username</h3></a>
   </section>
   <section class="photo_image">
     <img src="http://via.placeholder.com/600x700">
@@ -30,11 +31,10 @@
   <h6 class="photo_likes"><span>50551</span> Me gusta</h6>
   <section class="photo_comments">
     <section class="photo_comment">lorem20
-    </section>
+    </section><p>
     <input placeholder="Agrega un comentario..." class="photo_add_comment">
     <i class="icon-dot-3"></i>
 </section>
-
     <script  src="js/index.js"></script>
 
 </body>
