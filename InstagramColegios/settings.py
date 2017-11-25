@@ -124,3 +124,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'signin'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'signin'
+
+#Path archivos multimedia
+MEDIA_ROOT = os.path.join(BASE_DIR, 'INSTAGRAM/STATIC/MEDIA')
+MEDIA_URL = '/media/'

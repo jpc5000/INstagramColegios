@@ -10,12 +10,26 @@
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
       <link rel="stylesheet" href="{% static 'css/profile_style.css' %}">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 
 
 </head>
 
 <body>
-
+  <nav class="navbar">
+    <section class="logo-section"><img class="logo" src="http://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/57/2016/04/instagram-black-white-main.jpg"/>
+      <div></div><img class="logoname" src="http://mimatemas.es/wp-content/uploads/2016/11/Instagram_logo-letras.png"/>
+    </section>
+    <form class="search-section">
+      <input class="imput-search" type="search" name="search" placeholder="Buscar"/>
+    </form>
+    <section class="icons-section">
+      <a class="fa fa-upload" href="{% url 'photos' %}"></a>
+      <a class="fa fa-heart-o" href="#"></a>
+      <a class="fa fa-user-o" href="{% url 'profile' %}"></a>
+    </section>
+  </nav>
 <section class="insta">
   <section class="insta-header"><img class="insta-photo-profile" src="https://cdn.dribbble.com/users/259149/screenshots/2487219/totoro-sticker.png"/>
     <section class="insta-header-data">
@@ -26,7 +40,7 @@
         <button class="insta-options fa fa-ellipsis-h"></button>
       </section>
       <section class="insta-follows">
-        <p><span class="insta-indicator">12</span>publicaciones</p>
+        <p><span class="insta-indicator">{{ post_user|length }}</span>publicaciones</p>
         <p><span class="insta-indicator">23</span>seguidores</p>
         <p><span class="insta-indicator">30</span>seguidos</p>
       </section>
@@ -34,33 +48,15 @@
     </section>
   </section>
   <section class="insta-gallery">
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://via.placeholder.com/300x300"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
-    </section>
+    {% if post_user %}
+      {% for curr_post in post_user %}
+      <section class="insta-picture-container"><img class="insta-picture" src=" {% static ''%}{{curr_post.photo}} "/>
+        <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>12k</span></span><span><i class="fa fa-comment"></i><span>123k</span></span></section>
+      </section>
+      {% endfor %}
+    {%else%}
+      No tienes publicaciones:(
+    {% endif %}
   </section>
 </section>
 

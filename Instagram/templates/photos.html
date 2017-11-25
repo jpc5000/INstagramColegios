@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add photo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  </head>
+
+
+  <body>
+    <nav class="navbar">
+      <section class="logo-section"><img class="logo" src="http://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/57/2016/04/instagram-black-white-main.jpg"/>
+        <div></div><img class="logoname" src="http://mimatemas.es/wp-content/uploads/2016/11/Instagram_logo-letras.png"/>
+      </section>
+      <form class="search-section">
+        <input class="imput-search" type="search" name="search" placeholder="Buscar"/>
+      </form>
+      <section class="icons-section">
+        <a class="fa fa-upload" href="{% url 'photos' %}"></a>
+        <a class="fa fa-heart-o" href="#"></a>
+        <a class="fa fa-user-o" href="{% url 'profile' %}"></a>
+      </section>
+    </nav>
+
+    <center>
+    <div class="Creación"
+    <hr>
+
+
+<form class="" action="{% url 'photos' %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <br>
+  <input type="file" name="photo"><br>
+  <textarea name="descripcion" placeholder="Descripcion..." rows="3" cols="20">
+  </textarea>
+  </div>
+  <button name='button'>Subir foto</button>
+
+
+
+  </center>
+</form>
+</body>
+</html>
